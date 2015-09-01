@@ -14,6 +14,8 @@
 		58090DE51B950AF2009111B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58090DE41B950AF2009111B4 /* Images.xcassets */; };
 		58090DE81B950AF2009111B4 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58090DE61B950AF2009111B4 /* LaunchScreen.xib */; };
 		58090DF41B950AF2009111B4 /* MapKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58090DF31B950AF2009111B4 /* MapKitTests.m */; };
+		58090DFE1B950C6F009111B4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58090DFD1B950C6F009111B4 /* MapKit.framework */; };
+		586712581B964AB200403569 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 586712571B964AB200403569 /* Constants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		58090DED1B950AF2009111B4 /* MapKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58090DF21B950AF2009111B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		58090DF31B950AF2009111B4 /* MapKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapKitTests.m; sourceTree = "<group>"; };
+		58090DFD1B950C6F009111B4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		586712561B964AB200403569 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		586712571B964AB200403569 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58090DFE1B950C6F009111B4 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,7 @@
 		58090DCB1B950AF2009111B4 = {
 			isa = PBXGroup;
 			children = (
+				58090DFD1B950C6F009111B4 /* MapKit.framework */,
 				58090DD61B950AF2009111B4 /* MapKit */,
 				58090DF01B950AF2009111B4 /* MapKitTests */,
 				58090DD51B950AF2009111B4 /* Products */,
@@ -85,6 +92,8 @@
 				58090DDC1B950AF2009111B4 /* AppDelegate.m */,
 				58090DDE1B950AF2009111B4 /* ViewController.h */,
 				58090DDF1B950AF2009111B4 /* ViewController.m */,
+				586712561B964AB200403569 /* Constants.h */,
+				586712571B964AB200403569 /* Constants.m */,
 				58090DE11B950AF2009111B4 /* Main.storyboard */,
 				58090DE41B950AF2009111B4 /* Images.xcassets */,
 				58090DE61B950AF2009111B4 /* LaunchScreen.xib */,
@@ -168,6 +177,11 @@
 				TargetAttributes = {
 					58090DD31B950AF2009111B4 = {
 						CreatedOnToolsVersion = 6.4;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					58090DEC1B950AF2009111B4 = {
 						CreatedOnToolsVersion = 6.4;
@@ -222,6 +236,7 @@
 				58090DE01B950AF2009111B4 /* ViewController.m in Sources */,
 				58090DDD1B950AF2009111B4 /* AppDelegate.m in Sources */,
 				58090DDA1B950AF2009111B4 /* main.m in Sources */,
+				586712581B964AB200403569 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +433,7 @@
 				58090DF91B950AF2009111B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		58090DFA1B950AF2009111B4 /* Build configuration list for PBXNativeTarget "MapKitTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +442,7 @@
 				58090DFC1B950AF2009111B4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

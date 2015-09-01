@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
 @interface ViewController : UIViewController
 
+- (IBAction)longBeachButtonPressed:(id)sender;
+- (IBAction)capitolHillButtonPressed:(id)sender;
+- (IBAction)newYorkButtonPressed:(id)sender;
 
 @end
 

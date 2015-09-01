@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,66 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Gxr-cB-XTf">
+                                <rect key="frame" x="0.0" y="20" width="600" height="502"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tIc-xl-QXq">
+                                <rect key="frame" x="262" y="562" width="75" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Capitol Hill">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="capitolHillButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tXV-rs-WgJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVU-en-skI">
+                                <rect key="frame" x="345" y="562" width="66" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="New York">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newYorkButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5yH-tr-8CS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O5W-vQ-PD1">
+                                <rect key="frame" x="171" y="562" width="83" height="30"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Long Beach">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="longBeachButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B94-XN-RDk"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gxr-cB-XTf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="1lY-s5-VAH"/>
+                            <constraint firstItem="Gxr-cB-XTf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="26M-aG-E26"/>
+                            <constraint firstItem="tIc-xl-QXq" firstAttribute="top" secondItem="Gxr-cB-XTf" secondAttribute="bottom" constant="40" id="5f4-UO-05S"/>
+                            <constraint firstItem="PVU-en-skI" firstAttribute="leading" secondItem="tIc-xl-QXq" secondAttribute="trailing" constant="7.5" id="9Le-n6-A5U"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="O5W-vQ-PD1" secondAttribute="bottom" constant="8" id="A9T-M2-OQq"/>
+                            <constraint firstAttribute="centerX" secondItem="tIc-xl-QXq" secondAttribute="centerX" id="HCK-D3-1Ne"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gxr-cB-XTf" secondAttribute="trailing" constant="-16" id="PvI-VC-uti"/>
+                            <constraint firstItem="O5W-vQ-PD1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="208" id="R98-4J-yYY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PVU-en-skI" secondAttribute="bottom" constant="8" id="TNp-pV-uly"/>
+                            <constraint firstItem="O5W-vQ-PD1" firstAttribute="top" secondItem="tIc-xl-QXq" secondAttribute="top" id="kpV-Gk-rpg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tIc-xl-QXq" secondAttribute="bottom" constant="8" id="sZB-4w-QcC"/>
+                            <constraint firstItem="PVU-en-skI" firstAttribute="top" secondItem="tIc-xl-QXq" secondAttribute="top" id="svF-bw-frh"/>
+                            <constraint firstItem="tIc-xl-QXq" firstAttribute="leading" secondItem="O5W-vQ-PD1" secondAttribute="trailing" constant="8.5" id="vXV-y1-1eb"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="R98-4J-yYY"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="Gxr-cB-XTf" id="WQv-fC-m8W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
