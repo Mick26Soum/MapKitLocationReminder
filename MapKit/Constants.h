@@ -9,3 +9,4 @@
 #import <UIKit/UIKit.h>
 
 extern NSString *const kMyCity; 
+extern NSString *const kReminderNotification;

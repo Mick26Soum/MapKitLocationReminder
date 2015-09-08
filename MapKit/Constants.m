@@ -9,4 +9,5 @@
 #import "Constants.h"
 
 NSString *const kMyCity = @"Sea-Town";
+NSString *const kReminderNotification = @"Notification Fired";
 
